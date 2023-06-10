@@ -21,7 +21,6 @@
     transition:all .2s ease-in;
     border-radius: 5px;
     width: 100%;
-    flex: 1;
 }
 .user:hover {
     box-shadow: 0 8px 10px rgb(0 0 0 / 25%);
@@ -100,4 +99,23 @@
     border-color: #000;
     color: #000000;
     background: #fff;
+}
+
+
+@media (min-width: 576px) {
+    .user {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .user {
+        width: calc(50% - 23px);
+    }
+}
+
+@media (min-width: 1025px) {
+    .user {
+        width: calc(25% - 23px);
+    }
 }
