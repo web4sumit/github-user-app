@@ -1,0 +1,103 @@
+
+.userCard {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.search {
+    border-radius: 5px;
+    margin: 18px 0;
+    outline: none;
+    padding: 10px 0px 10px 12px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    width: calc(100% - 110px);
+}
+.user {
+    background: #ffffff;
+    transition:all .2s ease-in;
+    border-radius: 5px;
+    width: 100%;
+    flex: 1;
+}
+.user:hover {
+    box-shadow: 0 8px 10px rgb(0 0 0 / 25%);
+    transition:all .2s ease-in;
+}
+.user_image {
+    padding: 30px;
+    text-align: center;
+}
+.user_image img{
+    width: 100%;
+    transition: .3s ease-in;
+}
+.avatar_img{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.user:hover img{
+     transform: scale(1.2);
+     transition: .3s ease-in;
+}
+.user_image h4 {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #333333;
+}
+
+.search_btn {
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 9px 21px;
+    margin-left: 4px;
+    background: #000;
+    color: #ffffff;
+    border-color: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: .4s ease-in;
+    z-index: 9;
+    overflow: hidden;
+}
+.search_btn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 50%;
+    background:#fff;
+    z-index: -1;
+    transition: .4s ease-in;
+}
+.search_btn::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 50%;
+    background:#fff;
+    z-index: -1;
+    transition: .4s ease-in;
+}
+.search_btn:hover::after{
+    left: 0;
+}
+.search_btn:hover::before{
+    right: 0;
+}
+.search_btn:hover {
+    border-color: #000;
+    color: #000000;
+    background: #fff;
+}
