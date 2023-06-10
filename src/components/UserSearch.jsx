@@ -7,6 +7,7 @@ const UserSearch = () => {
 
     const handleSearchUsers = async () => {
         // to get user list --------------------------------
+        if(!query) return;
         const apiUrl = 'https://api.github.com/search/users';
         const searchUrl = `${apiUrl}?q=${query}`;
 
@@ -29,8 +30,9 @@ const UserSearch = () => {
                 </div>
 
                 <div className="userCard">
+                    {userList?.length === 0 && <p>No record found.</p>}
                     {userList && userList?.map((item, index) => (
-                        <div className="user">
+                        <div className="user" key={index}>
                             <div className='card'>
                                 <a href={item?.html_url} target='_balnk'>
                                     <div className='user_image'>
